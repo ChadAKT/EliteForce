@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ELITE FORCE - Premier Narrow.One gaming clan focused on strategy, teamwork and competitive gameplay">
+  <title>ELITE FORCE | Premium Gaming Clan</title>
+  
+  <!-- Google Fonts - Outfit & Syne -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- GSAP Animation Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MotionPathPlugin.min.js"></script>
+  
+  <!-- Three.js for 3D effects -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  
+  <!-- Particles.js -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  
+  <!-- Locomotive Scroll for smooth scrolling -->
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+  <!-- Cursor -->
+  <div class="cursor">
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <div class="cursor-text"></div>
+  </div>
+
+  <!-- Noise Overlay -->
+  <div class="noise-overlay"></div>
+
+  <!-- Particles Container -->
+  <div id="particles-js" class="particles-container"></div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <a href="#hero" class="logo" data-cursor="logo">
+        <div class="logo-symbol">
+          <svg viewBox="0 0 100 100">
+            <path d="M30,50 L45,35 L55,35 L70,50 L55,65 L45,65 Z" />
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-text-top">ELITE</span>
+          <span class="logo-text-bottom">FORCE</span>
+        </div>
+      </a>
+      
+      <nav class="nav">
+        <div class="nav-backdrop"></div>
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="#hero" class="nav-link active" data-cursor="link">
+              <span class="nav-link-number">01</span>
+              <span class="nav-link-text">Home</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link" data-cursor="link">
+              <span class="nav-link-number">02</span>
+              <span class="nav-link-text">About</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#features" class="nav-link" data-cursor="link">
+              <span class="nav-link-number">03</span>
+              <span class="nav-link-text">Features</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#events" class="nav-link" data-cursor="link">
+              <span class="nav-link-number">04</span>
+              <span class="nav-link-text">Events</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#gallery" class="nav-link" data-cursor="link">
+              <span class="nav-link-number">05</span>
+              <span class="nav-link-text">Gallery</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link" data-cursor="link">
+              <span class="nav-link-number">06</span>
+              <span class="nav-link-text">Contact</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      
+      <div class="header-actions">
+        <a href="https://discord.gg/EeuJWSjpe7" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer" data-cursor="button">
+          <span class="btn-text">Join Discord</span>
+          <span class="btn-icon"><i class="fab fa-discord"></i></span>
+        </a>
+        
+        <button class="menu-toggle" aria-label="Toggle menu" data-cursor="menu">
+          <div class="menu-toggle-lines">
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <div class="mobile-menu-container">
+      <div class="mobile-menu-header">
+        <a href="#hero" class="logo">
+          <div class="logo-symbol">
+            <svg viewBox="0 0 100 100">
+              <path d="M30,50 L45,35 L55,35 L70,50 L55,65 L45,65 Z" />
+            </svg>
+          </div>
+          <div class="logo-text">
+            <span class="logo-text-top">ELITE</span>
+            <span class="logo-text-bottom">FORCE</span>
+          </div>
+        </a>
+        
+        <button class="mobile-menu-close" aria-label="Close menu">
+          <div class="mobile-menu-close-icon">
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+      </div>
+      
+      <nav class="mobile-nav">
+        <ul class="mobile-nav-list">
+          <li class="mobile-nav-item">
+            <a href="#hero" class="mobile-nav-link active">
+              <span class="mobile-nav-link-number">01</span>
+              <span class="mobile-nav-link-text">Home</span>
+            </a>
+          </li>
+          <li class="mobile-nav-item">
+            <a href="#about" class="mobile-nav-link">
+              <span class="mobile-nav-link-number">02</span>
+              <span class="mobile-nav-link-text">About</span>
+            </a>
+          </li>
+          <li class="mobile-nav-item">
+            <a href="#features" class="mobile-nav-link">
+              <span class="mobile-nav-link-number">03</span>
+              <span class="mobile-nav-link-text">Features</span>
+            </a>
+          </li>
+          <li class="mobile-nav-item">
+            <a href="#events" class="mobile-nav-link">
+              <span class="mobile-nav-link-number">04</span>
+              <span class="mobile-nav-link-text">Events</span>
+            </a>
+          </li>
+          <li class="mobile-nav-item">
+            <a href="#gallery" class="mobile-nav-link">
+              <span class="mobile-nav-link-number">05</span>
+              <span class="mobile-nav-link-text">Gallery</span>
+            </a>
+          </li>
+          <li class="mobile-nav-item">
+            <a href="#contact" class="mobile-nav-link">
+              <span class="mobile-nav-link-number">06</span>
+              <span class="mobile-nav-link-text">Contact</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      
+      <div class="mobile-menu-footer">
+        <div class="mobile-menu-socials">
+          <a href="https://discord.gg/EeuJWSjpe7" class="mobile-menu-social" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-discord"></i>
+          </a>
+          <a href="mailto:EliteForceOrg@gmail.com" class="mobile-menu-social">
+            <i class="far fa-envelope"></i>
+          </a>
+        </div>
+        
+        <a href="https://discord.gg/EeuJWSjpe7" class="btn btn-primary btn-block" target="_blank" rel="noopener noreferrer">
+          <span class="btn-text">Join Our Discord</span>
+          <span class="btn-icon"><i class="fab fa-discord"></i></span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="main" data-scroll-container>
+    <!-- Hero Section -->
+    <section class="hero section" id="hero" data-scroll-section>
+      <div class="hero-bg">
+        <div class="hero-bg-gradient"></div>
+        <div class="hero-bg-grid"></div>
+        <div class="hero-bg-shapes">
+          <div class="hero-bg-shape hero-bg-shape-1"></div>
+          <div class="hero-bg-shape hero-bg-shape-2"></div>
+          <div class="hero-bg-shape hero-bg-shape-3"></div>
+        </div>
+      </div>
+      
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text" data-scroll data-scroll-speed="1">
+            <div class="hero-badge" data-scroll data-scroll-delay="0.1">
+              <span class="hero-badge-text">Narrow One Clan</span>
+            </div>
+            
+            <h1 class="hero-title">
+              <div class="hero-title-line" data-scroll data-scroll-delay="0.2">
+                <span class="hero-title-text">ELITE</span>
+              </div>
+              <div class="hero-title-line" data-scroll data-scroll-delay="0.3">
+                <span class="hero-title-text accent">FORCE</span>
+              </div>
+            </h1>
+            
+            <p class="hero-description" data-scroll data-scroll-delay="0.4">
+              Join the elite Narrow.One gaming clan where precision meets strategy. 
+              We're a community of dedicated players focused on dominating the battlefield 
+              with tactical gameplay and team coordination.
+            </p>
+            
+            <div class="hero-buttons" data-scroll data-scroll-delay="0.5">
+              <a href="https://discord.gg/EeuJWSjpe7" class="btn btn-primary" target="_blank" rel="noopener noreferrer" data-cursor="button">
+                <span class="btn-text">Join Our Discord</span>
+                <span class="btn-icon"><i class="fab fa-discord"></i></span>
+              </a>
+              
+              <a href="#about" class="btn btn-outline" data-cursor="button">
+                <span class="btn-text">Learn More</span>
+                <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
+              </a>
+            </div>
+          </div>
+          
+          <div class="hero-image" data-scroll data-scroll-speed="-1">
+            <div class="hero-image-wrapper">
+              <div class="hero-image-glow"></div>
+              <div class="hero-image-container">
+                <img src="EFLogo.png" alt="ELITE FORCE Clan Logo" class="hero-image-logo">
+              </div>
+              <div class="hero-image-orbits">
+                <div class="hero-image-orbit hero-image-orbit-1">
+                  <div class="hero-image-orbit-dot"></div>
+                </div>
+                <div class="hero-image-orbit hero-image-orbit-2">
+                  <div class="hero-image-orbit-dot"></div>
+                </div>
+                <div class="hero-image-orbit hero-image-orbit-3">
+                  <div class="hero-image-orbit-dot"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hero-stats" data-scroll data-scroll-speed="0.5">
+          <div class="hero-stat" data-scroll data-scroll-delay="0.1">
+            <div class="hero-stat-number" data-count="30">0</div>
+            <div class="hero-stat-label">Active Members</div>
+          </div>
+          
+          <div class="hero-stat" data-scroll data-scroll-delay="0.2">
+            <div class="hero-stat-number" data-count="2">0</div>
+            <div class="hero-stat-label">Tournaments Won</div>
+          </div>
+          
+          <div class="hero-stat" data-scroll data-scroll-delay="0.3">
+            <div class="hero-stat-number" data-count="7">0</div>
+            <div class="hero-stat-label">Months Active</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="scroll-indicator" data-scroll data-scroll-speed="1" data-cursor="scroll">
+        <div class="scroll-indicator-text">Scroll Down</div>
+        <div class="scroll-indicator-icon">
+          <i class="fas fa-chevron-down"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- Members Ticker -->
+    <div class="ticker" data-scroll-section>
+      <div class="ticker-wrapper">
+        <div class="ticker-track">
+          <div class="ticker-item">É𝓕 Zeno</div>
+          <div class="ticker-item">É𝓕 Fanaddt</div>
+          <div class="ticker-item">É𝓕 Abcde</div>
+          <div class="ticker-item">É𝓕 Mani</div>
+          <div class="ticker-item">É𝓕 Hidden</div>
+          <div class="ticker-item">É𝓕 Ducky</div>
+          <div class="ticker-item">É𝓕 BowBlitz</div>
+          <div class="ticker-item">É𝓕 Starsket</div>
+          <div class="ticker-item">É𝓕 6442 Ping</div>
+          <div class="ticker-item">É𝓕 Liquid</div>
+          <div class="ticker-item">É𝓕 Ghost</div>
+          <div class="ticker-item">É𝓕 The Hyde</div>
+          <div class="ticker-item">É𝓕 ChadAKT</div>
+          <div class="ticker-item">É𝓕 Death</div>
+          <div class="ticker-item">É𝓕 Ourson</div>
+          <div class="ticker-item">É𝓕 TRN</div>
+          <div class="ticker-item">É𝓕 Gruvems</div>
+          <div class="ticker-item">É𝓕 AloneBoy</div>
+          <div class="ticker-item">É𝓕 Lichtel</div>
+          <div class="ticker-item">É𝓕 Data</div>
+          <div class="ticker-item">É𝓕 Vera</div>
+          <div class="ticker-item">É𝓕 Fazobeats</div>
+          <div class="ticker-item">É𝓕 Benji</div>
+          <div class="ticker-item">É𝓕 Rawr</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="about section" id="about" data-scroll-section>
+      <div class="container">
+        <div class="section-header" data-scroll data-scroll-speed="0.5">
+          <div class="section-badge" data-scroll>
+            <span class="section-badge-text">Our Story</span>
+          </div>
+          
+          <h2 class="section-title" data-scroll>
+            About <span class="accent">Us</span>
+          </h2>
+          
+          <p class="section-subtitle" data-scroll>
+            Learn more about our clan and the game we dominate
+          </p>
+        </div>
+        
+        <div class="about-content">
+          <div class="about-image" data-scroll data-scroll-speed="1">
+            <div class="about-image-wrapper">
+              <div class="about-image-glow"></div>
+              <div class="about-image-container">
+                <img src="EFLogo.png" alt="About ELITE FORCE Clan" class="about-image-logo">
+              </div>
+              <div class="about-image-decor about-image-decor-1"></div>
+              <div class="about-image-decor about-image-decor-2"></div>
+            </div>
+          </div>
+          
+          <div class="about-text" data-scroll data-scroll-speed="0.5">
+            <h3 class="about-title" data-scroll>
+              Elite <span class="accent">Force</span> Players
+            </h3>
+            
+            <p class="about-description" data-scroll>
+              ELITE FORCE is a premier gaming clan dedicated to Narrow.One, the fast-paced multiplayer shooter that tests your reflexes and strategic thinking. Founded by a group of passionate players, we've quickly risen to become one of the most respected clans in the game.
+            </p>
+            
+            <p class="about-description" data-scroll>
+              Our members are carefully selected based on skill, teamwork, and dedication. We value strategy over brute force, teamwork over individual glory, and consistent improvement over temporary victories.
+            </p>
+            
+            <div class="about-features">
+              <div class="about-feature" data-scroll>
+                <div class="about-feature-icon">
+                  <i class="fas fa-crosshairs"></i>
+                </div>
+                
+                <div class="about-feature-content">
+                  <h4 class="about-feature-title">Precision</h4>
+                  <p class="about-feature-text">We focus on accuracy and timing in every match</p>
+                </div>
+              </div>
+              
+              <div class="about-feature" data-scroll>
+                <div class="about-feature-icon">
+                  <i class="fas fa-users"></i>
+                </div>
+                
+                <div class="about-feature-content">
+                  <h4 class="about-feature-title">Teamwork</h4>
+                  <p class="about-feature-text">Coordination and communication are our strengths</p>
+                </div>
+              </div>
+              
+              <div class="about-feature" data-scroll>
+                <div class="about-feature-icon">
+                  <i class="fas fa-chess"></i>
+                </div>
+                
+                <div class="about-feature-content">
+                  <h4 class="about-feature-title">Strategy</h4>
+                  <p class="about-feature-text">We develop and execute advanced tactical plans</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features section" id="features" data-scroll-section>
+      <div class="features-bg">
+        <div class="features-bg-gradient"></div>
+        <div class="features-bg-grid"></div>
+      </div>
+      
+      <div class="container">
+        <div class="section-header" data-scroll data-scroll-speed="0.5">
+          <div class="section-badge" data-scroll>
+            <span class="section-badge-text">Our Activities</span>
+          </div>
+          
+          <h2 class="section-title" data-scroll>
+            What We <span class="accent">Do</span>
+          </h2>
+          
+          <p class="section-subtitle" data-scroll>
+            Our clan activities and specialties
+          </p>
+        </div>
+        
+        <div class="features-grid">
+          <div class="feature-card" data-scroll data-scroll-delay="0.1" data-cursor="drag">
+            <div class="feature-card-inner">
+              <div class="feature-card-front">
+                <div class="feature-icon">
+                  <i class="fas fa-trophy"></i>
+                </div>
+                
+                <h3 class="feature-title">Clan Wars</h3>
+                
+                <div class="feature-hover-indicator">
+                  <span>Hover to reveal</span>
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+              </div>
+              
+              <div class="feature-card-back">
+                <p class="feature-description">
+                  We regularly challenge other top clans to competitive matches. Our strategic approach and team coordination have led to an impressive win rate in clan wars.
+                </p>
+                
+                <div class="feature-hover-indicator">
+                  <span>Back</span>
+                  <i class="fas fa-arrow-left"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="feature-card" data-scroll data-scroll-delay="0.2" data-cursor="drag">
+            <div class="feature-card-inner">
+              <div class="feature-card-front">
+                <div class="feature-icon">
+                  <i class="fas fa-medal"></i>
+                </div>
+                
+                <h3 class="feature-title">Tournaments</h3>
+                
+                <div class="feature-hover-indicator">
+                  <span>Hover to reveal</span>
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+              </div>
+              
+              <div class="feature-card-back">
+                <p class="feature-description">
+                  We participate in official and community-run tournaments, consistently placing in the top ranks and bringing home trophies for our showcase.
+                </p>
+                
+                <div class="feature-hover-indicator">
+                  <span>Back</span>
+                  <i class="fas fa-arrow-left"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="feature-card" data-scroll data-scroll-delay="0.3" data-cursor="drag">
+            <div class="feature-card-inner">
+              <div class="feature-card-front">
+                <div class="feature-icon">
+                  <i class="fas fa-graduation-cap"></i>
+                </div>
+                
+                <h3 class="feature-title">Training Sessions</h3>
+                
+                <div class="feature-hover-indicator">
+                  <span>Hover to reveal</span>
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+              </div>
+              
+              <div class="feature-card-back">
+                <p class="feature-description">
+                  Weekly training sessions help our members improve their skills, learn new strategies, and maintain our competitive edge against other clans.
+                </p>
+                
+                <div class="feature-hover-indicator">
+                  <span>Back</span>
+                  <i class="fas fa-arrow-left"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="feature-card" data-scroll data-scroll-delay="0.4" data-cursor="drag">
+            <div class="feature-card-inner">
+              <div class="feature-card-front">
+                <div class="feature-icon">
+                  <i class="fas fa-gamepad"></i>
+                </div>
+                
+                <h3 class="feature-title">Casual Play</h3>
+                
+                <div class="feature-hover-indicator">
+                  <span>Hover to reveal</span>
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+              </div>
+              
+              <div class="feature-card-back">
+                <p class="feature-description">
+                  Not everything is competitive! We also enjoy casual gaming sessions where members can relax, try new tactics, and simply have fun together.
+                </p>
+                
+                <div class="feature-hover-indicator">
+                  <span>Back</span>
+                  <i class="fas fa-arrow-left"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="feature-card" data-scroll data-scroll-delay="0.5" data-cursor="drag">
+            <div class="feature-card-inner">
+              <div class="feature-card-front">
+                <div class="feature-icon">
+                  <i class="fas fa-video"></i>
+                </div>
+                
+                <h3 class="feature-title">Content Creation</h3>
+                
+                <div class="feature-hover-indicator">
+                  <span>Hover to reveal</span>
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+              </div>
+              
+              <div class="feature-card-back">
+                <p class="feature-description">
+                  We create and share gameplay videos, tutorials, and highlights to showcase our skills and help the broader Narrow.One community improve.
+                </p>
+                
+                <div class="feature-hover-indicator">
+                  <span>Back</span>
+                  <i class="fas fa-arrow-left"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="feature-card" data-scroll data-scroll-delay="0.6" data-cursor="drag">
+            <div class="feature-card-inner">
+              <div class="feature-card-front">
+                <div class="feature-icon">
+                  <i class="fas fa-comments"></i>
+                </div>
+                
+                <h3 class="feature-title">Community Building</h3>
+                
+                <div class="feature-hover-indicator">
+                  <span>Hover to reveal</span>
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+              </div>
+              
+              <div class="feature-card-back">
+                <p class="feature-description">
+                  We foster a supportive gaming community where players can connect, share strategies, and build lasting friendships beyond the game.
+                </p>
+                
+                <div class="feature-hover-indicator">
+                  <span>Back</span>
+                  <i class="fas fa-arrow-left"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="events section" id="events" data-scroll-section>
+      <div class="container">
+        <div class="section-header" data-scroll data-scroll-speed="0.5">
+          <div class="section-badge" data-scroll>
+            <span class="section-badge-text">Join Us</span>
+          </div>
+          
+          <h2 class="section-title" data-scroll>
+            Upcoming <span class="accent">Events</span>
+          </h2>
+          
+          <p class="section-subtitle" data-scroll>
+            Join our scheduled matches and tournaments
+          </p>
+        </div>
+        
+        <div class="events-slider" data-scroll>
+          <div class="events-track">
+            <!-- First Event -->
+            <div class="event-card" data-cursor="view">
+              <div class="event-card-inner">
+                <div class="event-date">
+                  <div class="event-date-day">20</div>
+                  <div class="event-date-month">APR</div>
+                </div>
+                
+                <div class="event-content">
+                  <div class="event-badge">Tournament</div>
+                  
+                  <h3 class="event-title">2 vs 2 Tournament</h3>
+                  
+                  <p class="event-description">
+                    Join our exciting 2 vs 2 tournament where teams will compete in a double elimination bracket. Show off your teamwork and coordination skills!
+                  </p>
+                  
+                  <div class="event-details">
+                    <div class="event-detail">
+                      <i class="fas fa-clock"></i>
+                      <span>8:00 PM UTC</span>
+                    </div>
+                    
+                    <div class="event-detail">
+                      <i class="fas fa-users"></i>
+                      <span>16 Teams Maximum</span>
+                    </div>
+                    
+                    <div class="event-detail">
+                      <i class="fas fa-map-marker-alt"></i>
+                      <span>Discord Voice Channel</span>
+                    </div>
+                  </div>
+                  
+                  <a href="https://discord.gg/EeuJWSjpe7" class="btn btn-primary" target="_blank" rel="noopener noreferrer" data-cursor="button">
+                    <span class="btn-text">Join Tournament</span>
+                    <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Second Event -->
+            <div class="event-card" data-cursor="view">
+              <div class="event-card-inner">
+                <div class="event-date">
+                  <div class="event-date-day">1</div>
+                  <div class="event-date-month">MAY</div>
+                </div>
+                
+                <div class="event-content">
+                  <div class="event-badge">Special Event</div>
+                  
+                  <h3 class="event-title">Tower Defense</h3>
+                  
+                  <p class="event-description">
+                    Test your strategic skills in our Tower Defense event. Build the perfect defense and outlast your opponents in this exciting game mode.
+                  </p>
+                  
+                  <div class="event-details">
+                    <div class="event-detail">
+                      <i class="fas fa-clock"></i>
+                      <span>10:30 AM UTC</span>
+                    </div>
+                    
+                    <div class="event-detail">
+                      <i class="fas fa-shield-alt"></i>
+                      <span>Solo Competition</span>
+                    </div>
+                    
+                    <div class="event-detail">
+                      <i class="fas fa-trophy"></i>
+                      <span>In-game Rewards</span>
+                    </div>
+                  </div>
+                  
+                  <a href="https://discord.gg/EeuJWSjpe7" class="btn btn-primary" target="_blank" rel="noopener noreferrer" data-cursor="button">
+                    <span class="btn-text">Join Event</span>
+                    <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="events-navigation">
+            <button class="events-nav events-nav-prev" aria-label="Previous event" data-cursor="prev">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            
+            <div class="events-pagination"></div>
+            
+            <button class="events-nav events-nav-next" aria-label="Next event" data-cursor="next">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+<section class="gallery section" id="gallery" data-scroll-section>
+  <div class="gallery-bg">
+    <div class="gallery-bg-gradient"></div>
+    <div class="gallery-bg-grid"></div>
+  </div>
+  
+  <div class="container">
+    <div class="section-header" data-scroll data-scroll-speed="0.5">
+      <div class="section-badge" data-scroll>
+        <span class="section-badge-text">Our Moments</span>
+      </div>
+      
+      <h2 class="section-title" data-scroll>
+        Our <span class="accent">Gallery</span>
+      </h2>
+      
+      <p class="section-subtitle" data-scroll>
+        Screenshots and highlights from our gameplay
+      </p>
+    </div>
+    
+    <div class="gallery-filter" data-scroll>
+      <button class="gallery-filter-btn active" data-filter="all" data-cursor="filter">
+        <span>All</span>
+      </button>
+      
+      <button class="gallery-filter-btn" data-filter="tournaments" data-cursor="filter">
+        <span>Tournaments</span>
+      </button>
+      
+      <button class="gallery-filter-btn" data-filter="training" data-cursor="filter">
+        <span>Training</span>
+      </button>
+      
+      <button class="gallery-filter-btn" data-filter="events" data-cursor="filter">
+        <span>Events</span>
+      </button>
+    </div>
+    
+    <div class="gallery-grid" data-scroll>
+      <!-- Gallery Item 1 -->
+      <div class="gallery-item" data-category="tournaments" data-cursor="expand">
+        <div class="gallery-item-inner">
+          <img src="images/gallery1.png" alt="Tournament Screenshot 1" class="gallery-img">
+          
+          <div class="gallery-overlay">
+            <div class="gallery-info">
+              <div class="gallery-category">Tournament</div>
+              <h3 class="gallery-title">Elite Squad</h3>
+              <p class="gallery-description">Our elite team ready for battle</p>
+              <a href="images/gallery1.png" class="gallery-zoom" data-lightbox>
+                <i class="fas fa-expand"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Gallery Item 2 -->
+      <div class="gallery-item" data-category="training" data-cursor="expand">
+        <div class="gallery-item-inner">
+          <img src="images/gallery2.png" alt="Training Screenshot" class="gallery-img">
+          
+          <div class="gallery-overlay">
+            <div class="gallery-info">
+              <div class="gallery-category">Training</div>
+              <h3 class="gallery-title">Battle Spoils</h3>
+              <p class="gallery-description">Rewards from our latest conquest</p>
+              <a href="images/gallery2.png" class="gallery-zoom" data-lightbox>
+                <i class="fas fa-expand"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Gallery Item 3 -->
+      <div class="gallery-item" data-category="events" data-cursor="expand">
+        <div class="gallery-item-inner">
+          <img src="images/gallery3.png" alt="Event Screenshot" class="gallery-img">
+          
+          <div class="gallery-overlay">
+            <div class="gallery-info">
+              <div class="gallery-category">Event</div>
+              <h3 class="gallery-title">Skeleton Guardian</h3>
+              <p class="gallery-description">Facing the dungeon's final boss</p>
+              <a href="images/gallery3.png" class="gallery-zoom" data-lightbox>
+                <i class="fas fa-expand"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Gallery Item 4 -->
+      <div class="gallery-item" data-category="training" data-cursor="expand">
+        <div class="gallery-item-inner">
+          <img src="images/gallery4.png" alt="Training Screenshot 2" class="gallery-img">
+          
+          <div class="gallery-overlay">
+            <div class="gallery-info">
+              <div class="gallery-category">Training</div>
+              <h3 class="gallery-title">Royal Conquest</h3>
+              <p class="gallery-description">Claiming victory in the castle grounds</p>
+              <a href="images/gallery4.png" class="gallery-zoom" data-lightbox>
+                <i class="fas fa-expand"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Gallery Item 5 -->
+      <div class="gallery-item" data-category="tournaments" data-cursor="expand">
+        <div class="gallery-item-inner">
+          <img src="images/gallery5.png" alt="Tournament Screenshot 2" class="gallery-img">
+          
+          <div class="gallery-overlay">
+            <div class="gallery-info">
+              <div class="gallery-category">Tournament</div>
+              <h3 class="gallery-title">Night Voyage</h3>
+              <p class="gallery-description">Sailing through treacherous waters</p>
+              <a href="images/gallery5.png" class="gallery-zoom" data-lightbox>
+                <i class="fas fa-expand"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Gallery Item 6 -->
+      <div class="gallery-item" data-category="events" data-cursor="expand">
+        <div class="gallery-item-inner">
+          <img src="images/gallery6.png" alt="Event Screenshot 2" class="gallery-img">
+          
+          <div class="gallery-overlay">
+            <div class="gallery-info">
+              <div class="gallery-category">Event</div>
+              <h3 class="gallery-title">Dungeon Guardians</h3>
+              <p class="gallery-description">The skeletal sentinels of the castle</p>
+              <a href="images/gallery6.png" class="gallery-zoom" data-lightbox>
+                <i class="fas fa-expand"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact" data-scroll-section>
+      <div class="container">
+        <div class="section-header" data-scroll data-scroll-speed="0.5">
+          <div class="section-badge" data-scroll>
+            <span class="section-badge-text">Get In Touch</span>
+          </div>
+          
+          <h2 class="section-title" data-scroll>
+            Join <span class="accent">Us</span>
+          </h2>
+          
+          <p class="section-subtitle" data-scroll>
+            Interested in becoming part of our clan? Get in touch!
+          </p>
+        </div>
+        
+        <div class="contact-content">
+          <div class="contact-info" data-scroll data-scroll-speed="0.5">
+            <h3 class="contact-title" data-scroll>
+              Connect With <span class="accent">Us</span>
+            </h3>
+            
+            <p class="contact-description" data-scroll>
+              We're always looking for skilled and dedicated players to join our ranks. If you think you have what it takes to be part of ELITE FORCE, reach out through any of these channels.
+            </p>
+            
+            <div class="contact-socials" data-scroll>
+              <a href="https://discord.gg/EeuJWSjpe7" class="contact-social" target="_blank" rel="noopener noreferrer" data-cursor="link">
+                <div class="contact-social-icon">
+                  <i class="fab fa-discord"></i>
+                </div>
+                
+                <div class="contact-social-text">
+                  <h4 class="contact-social-title">Discord</h4>
+                  <p class="contact-social-value">discord.gg/EliteForce</p>
+                </div>
+              </a>
+              
+              <a href="mailto:EliteForceOrg@gmail.com" class="contact-social" data-cursor="link">
+                <div class="contact-social-icon">
+                  <i class="far fa-envelope"></i>
+                </div>
+                
+                <div class="contact-social-text">
+                  <h4 class="contact-social-title">Email</h4>
+                  <p class="contact-social-value">EliteForceOrg@gmail.com</p>
+                </div>
+              </a>
+            </div>
+            
+            <div class="contact-cta" data-scroll>
+              <a href="https://discord.gg/EeuJWSjpe7" class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer" data-cursor="button">
+                <span class="btn-text">Join Our Discord</span>
+                <span class="btn-icon"><i class="fab fa-discord"></i></span>
+              </a>
+            </div>
+          </div>
+          
+          <div class="contact-form-wrapper" data-scroll data-scroll-speed="0.5">
+            <form id="contactForm" class="contact-form" action="https://formsubmit.co/EliteForceOrg@gmail.com" method="POST" data-scroll>
+              <div class="form-group">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+                  <label for="name">Your Name</label>
+                  <div class="form-icon">
+                    <i class="fas fa-user"></i>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <div class="form-floating">
+                  <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
+                  <label for="email">Your Email</label>
+                  <div class="form-icon">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="gamertag" name="gamertag" placeholder="Your Gamertag">
+                  <label for="gamertag">Your Gamertag</label>
+                  <div class="form-icon">
+                    <i class="fas fa-gamepad"></i>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <div class="form-floating">
+                  <textarea class="form-control" id="message" name="message" placeholder="Your Message" required></textarea>
+                  <label for="message">Your Message</label>
+                  <div class="form-icon">
+                    <i class="fas fa-comment"></i>
+                  </div>
+                </div>
+              </div>
+              
+              <button type="submit" class="btn btn-primary btn-block" data-cursor="button">
+                <span class="btn-text">Send Message</span>
+                <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-bg">
+      <div class="footer-bg-gradient"></div>
+      <div class="footer-bg-grid"></div>
+    </div>
+    
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <a href="#hero" class="logo" data-cursor="logo">
+            <div class="logo-symbol">
+              <svg viewBox="0 0 100 100">
+                <path d="M30,50 L45,35 L55,35 L70,50 L55,65 L45,65 Z" />
+              </svg>
+            </div>
+            <div class="logo-text">
+              <span class="logo-text-top">ELITE</span>
+              <span class="logo-text-bottom">FORCE</span>
+            </div>
+          </a>
+          
+          <p class="footer-description">
+            Elite gaming clan dedicated to dominating in Narrow.One. Join us to become part of a team that values skill, strategy, and teamwork.
+          </p>
+          
+          <div class="footer-socials">
+            <a href="https://discord.gg/EeuJWSjpe7" class="footer-social" target="_blank" rel="noopener noreferrer" data-cursor="link">
+              <i class="fab fa-discord"></i>
+            </a>
+            <a href="mailto:EliteForceOrg@gmail.com" class="footer-social" data-cursor="link">
+              <i class="far fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <h3 class="footer-heading">Quick Links</h3>
+          
+          <ul class="footer-nav">
+            <li class="footer-nav-item">
+              <a href="#hero" class="footer-nav-link" data-cursor="link">
+                <i class="fas fa-chevron-right"></i>
+                <span>Home</span>
+              </a>
+            </li>
+            <li class="footer-nav-item">
+              <a href="#about" class="footer-nav-link" data-cursor="link">
+                <i class="fas fa-chevron-right"></i>
+                <span>About</span>
+              </a>
+            </li>
+            <li class="footer-nav-item">
+              <a href="#features" class="footer-nav-link" data-cursor="link">
+                <i class="fas fa-chevron-right"></i>
+                <span>Features</span>
+              </a>
+            </li>
+            <li class="footer-nav-item">
+              <a href="#events" class="footer-nav-link" data-cursor="link">
+                <i class="fas fa-chevron-right"></i>
+                <span>Events</span>
+              </a>
+            </li>
+            <li class="footer-nav-item">
+              <a href="#gallery" class="footer-nav-link" data-cursor="link">
+                <i class="fas fa-chevron-right"></i>
+                <span>Gallery</span>
+              </a>
+            </li>
+            <li class="footer-nav-item">
+              <a href="#contact" class="footer-nav-link" data-cursor="link">
+                <i class="fas fa-chevron-right"></i>
+                <span>Contact</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="footer-newsletter">
+          <h3 class="footer-heading">Stay Updated</h3>
+          
+          <p class="footer-newsletter-text">
+            Subscribe to our newsletter to get the latest updates on events and tournaments.
+          </p>
+          
+          <form class="footer-newsletter-form">
+            <div class="form-group">
+              <input type="email" class="form-control" placeholder="Your Email" required>
+              <button type="submit" class="btn btn-primary" data-cursor="button">
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          &copy; 2025 ELITE FORCE Clan. All Rights Reserved.
+        </p>
+        
+        <div class="footer-bottom-links">
+          <a href="#" data-cursor="link">Privacy Policy</a>
+          <a href="#" data-cursor="link">Terms of Service</a>
+          <a href="#" data-cursor="link">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <a href="#hero" class="back-to-top" aria-label="Back to top" data-cursor="back">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
+  <!-- Lightbox -->
+  <div class="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="lightbox-content">
+      <button class="lightbox-close" aria-label="Close lightbox" data-cursor="close">
+        <i class="fas fa-times"></i>
+      </button>
+      
+      <img src="/placeholder.svg" alt="" class="lightbox-image">
+      
+      <div class="lightbox-caption"></div>
+      
+      <button class="lightbox-nav lightbox-prev" aria-label="Previous image" data-cursor="prev">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      
+      <button class="lightbox-nav lightbox-next" aria-label="Next image" data-cursor="next">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+</html>
