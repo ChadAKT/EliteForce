@@ -2100,6 +2100,7 @@ body[data-cursor="text"] .cursor-text {
 --------------------------------------------------------------*/
 .gallery {
   position: relative;
+  opacity: 1;
 }
 
 .gallery-bg {
@@ -2109,6 +2110,7 @@ body[data-cursor="text"] .cursor-text {
   width: 100%;
   height: 100%;
   z-index: -1;
+  opacity: 1;
 }
 
 .gallery-bg-gradient {
@@ -2118,6 +2120,7 @@ body[data-cursor="text"] .cursor-text {
   width: 100%;
   height: 100%;
   background: linear-gradient(to bottom, rgba(var(--color-bg-primary-rgb), 0.8), rgba(var(--color-bg-secondary-rgb), 0.8));
+  opacity: 1;
 }
 
 .gallery-bg-grid {
@@ -2138,6 +2141,7 @@ body[data-cursor="text"] .cursor-text {
   flex-wrap: wrap;
   gap: var(--spacing-sm);
   margin-bottom: var(--spacing-2xl);
+  opacity: 1;
 }
 
 .gallery-filter-btn {
@@ -2153,6 +2157,7 @@ body[data-cursor="text"] .cursor-text {
   position: relative;
   overflow: hidden;
   font-family: var(--font-primary);
+  opacity: 1;
 }
 
 .gallery-filter-btn span {
@@ -2167,10 +2172,13 @@ body[data-cursor="text"] .cursor-text {
   box-shadow: 0 0 15px rgba(var(--color-primary-rgb), 0.3);
 }
 
+/* 💥 Grid wrapper */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
   gap: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+  opacity: 1;
 }
 
 .gallery-item {
@@ -2181,6 +2189,7 @@ body[data-cursor="text"] .cursor-text {
   box-shadow: var(--shadow-sm);
   transition: all var(--transition-normal);
   z-index: 1;
+  opacity: 1;
 }
 
 .gallery-item:hover {
@@ -2192,6 +2201,7 @@ body[data-cursor="text"] .cursor-text {
   width: 100%;
   height: 100%;
   position: relative;
+  opacity: 1;
 }
 
 .gallery-img {
@@ -2200,6 +2210,7 @@ body[data-cursor="text"] .cursor-text {
   object-fit: cover;
   transition: transform var(--transition-normal);
   display: block;
+  opacity: 1;
 }
 
 .gallery-item:hover .gallery-img {
@@ -2229,6 +2240,7 @@ body[data-cursor="text"] .cursor-text {
   padding: var(--spacing-lg);
   transform: translateY(20px);
   transition: transform var(--transition-normal);
+  opacity: 1;
 }
 
 .gallery-item:hover .gallery-info {
@@ -2246,18 +2258,21 @@ body[data-cursor="text"] .cursor-text {
   margin-bottom: var(--spacing-sm);
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  opacity: 1;
 }
 
 .gallery-title {
   font-size: 2.2rem;
   color: white;
   margin-bottom: 0.5rem;
+  opacity: 1;
 }
 
 .gallery-description {
   font-size: 1.4rem;
   color: rgba(255, 255, 255, 0.8);
   margin-bottom: var(--spacing-md);
+  opacity: 1;
 }
 
 .gallery-zoom {
@@ -2272,12 +2287,14 @@ body[data-cursor="text"] .cursor-text {
   justify-content: center;
   font-size: 1.8rem;
   transition: all var(--transition-normal);
+  opacity: 1;
 }
 
 .gallery-zoom:hover {
   transform: scale(1.1);
   box-shadow: 0 0 15px var(--color-primary);
 }
+
 
 /*--------------------------------------------------------------
 # Contact Section
