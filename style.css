@@ -53,8 +53,8 @@
   --shadow-text: 0 2px 4px rgba(0, 0, 0, 0.5);
 
   /* Typography */
-  --font-primary: "Oxanium", cursive;
-  --font-secondary: "Oxanium", cursive;
+  --font-primary: "Roboto Mono", monospace;
+  --font-secondary: "Roboto Mono", monospace;
 
   /* Transitions */
   --transition-fast: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -3781,4 +3781,3 @@ textarea.form-control {
 .card-wrapper:hover .card-inner {
   transform: translateY(-10px);
 }
-
