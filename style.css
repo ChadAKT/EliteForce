@@ -3790,3 +3790,48 @@ textarea.form-control {
 .card-wrapper:hover .card-inner {
   transform: translateY(-10px);
 }
+
+/* Add this to your CSS file - Member Cards Font Update */
+.card-front .name,
+.card-front .stat-value,
+.card-front .stat-label,
+.card-front .rarity-badge,
+.card-front .overall span,
+.card-front .ovr-value,
+.card-front .traits span {
+  font-family: "Orbitron", sans-serif !important;
+  letter-spacing: 1px;
+}
+
+/* Adjust specific elements for better Orbitron appearance */
+.card-front .name {
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.card-front .rarity-badge {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.card-front .stat-value {
+  font-weight: 700;
+}
+
+.card-front .stat-label {
+  font-weight: 600;
+  font-size: 11px;
+}
+
+.card-front .overall span:first-child {
+  font-weight: 600;
+}
+
+.card-front .ovr-value {
+  font-weight: 800;
+}
+
+.card-front .traits span {
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
